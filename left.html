@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>侧边栏</title>
+    <style type="text/css">
+        .div1 a {
+            font-size: 15px;
+            line-height: 15px;
+        }
+
+        .div1 a:hover {
+            color: red;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+<div style="height: 30%;float: left" class="div1">
+    <ul id="navigation">
+        <li>
+            <a href="" class="head">系统设置</a>
+            <ul style="height: 25px;padding-top: 10px">
+                <li style="height: 20px;">
+                    <a href="pwd_update.php" target="_self">密码修改</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="head">图书管理</a>
+            <ul>
+                <li>
+                    <a href="select.php" target="_self">图书查询</a>
+                </li>
+                <li>
+                    <a href="insert.php" target="_self">图书添加</a>
+                </li>
+
+                <li>
+                    <a href="content.php?id=1" target="_self">图书列表</a>
+                </li>
+                <li>
+                    <a href="static.php" target="_self">图书统计</a>
+                </li>
+                <li>
+                    <a href="" class="head">版本信息</a>
+                </li>
+                <ul>
+                    <li>
+                        <div align="left">SS3.3</div>
+                    </li>
+                </ul>
+            </ul>
+        </li>
+    </ul>
+    <table style="float:right;margin-bottom: 1000px">
+        <tr>
+            <td>
+                <table width="100%" border="0" cellpadding="0" cellspacing="1" bgcolor="#a8c7ce">
+                    <tr>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <span>软件版本</span>
+                            </div>
+                        </td>
+                        <td height="20" align="center" bgcolor="#FFFFFF">SS3.3</td>
+                    </tr>
+                    <tr>
+                        <td width="23%" height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <span>php版本</span>
+                            </div>
+                        </td>
+                        <td width="77%" height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <?php echo "PHP".PHP_VERSION;?>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <span>服务器名：</span>
+                            </div>
+                        </td>
+                        <td height="20" align="center" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <?php echo $_SERVER['SERVER_NAME']?>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <span>服务器ip：</span>
+                            </div>
+                        </td>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <?php echo $_SERVER['HTTP_HOST'];?>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <span>服务器端口：</span>
+                            </div>
+                        </td>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <?php echo $_SERVER['SERVER_PORT'];?>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <span>服务器时间：</span>
+                            </div>
+                        </td>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <?php echo $showtime=date("Y-m-d H:i:s");?>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <span>服务器操作系统：</span>
+                            </div>
+                        </td>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <?php echo PHP_OS;?>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <span>站点物理路径：</span>
+                            </div>
+                        </td>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <?php echo $_SERVER['DOCUMENT_ROOT'];?>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                            <span>
+                                <?php echo  $_SESSION['admin']?>
+                            </span>
+                            </div>
+                        </td>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                系统管理员
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <span>在线使用帮助</span>
+                            </div>
+                        </td>
+                        <td height="20" align="left" bgcolor="#FFFFFF">
+                            <div align="center">
+                                <a href="#">查看在线帮助文档</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
